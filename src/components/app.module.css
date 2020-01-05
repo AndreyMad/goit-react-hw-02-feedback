@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.title,
+.statistics_title {
+  font-size: 25px;
+}
+.button {
+  width: 60px;
+  height: 25px;
+  border-radius: 5px;
+  margin: 20px 10px;
+  font-size: 12px;
+  background-color: #fff;
+}
+.statistics_title {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.stat_text {
+  margin: 8px 0px;
+  font-size: 16px;
+  font-weight: bold;
+}

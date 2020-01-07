@@ -14,6 +14,8 @@ class App extends Component {
     this.setState(prevState => ({
       [name]: prevState[name] + 1
     }));
+    this.positivePercentageCounter();
+    localStorage.setItem("state", JSON.stringify(this.state));
   };
 
   feedbackCounter = () => {
@@ -21,7 +23,9 @@ class App extends Component {
   };
 
   positivePercentageCounter = () => {
-    this.setState.percentage = (this.state.good * 100) / this.feedbackCounter();
+    this.setState(prevState => ({
+      percentage: ((prevState.good * 100) / this.feedbackCounter()).toFixed(2)
+    }));
   };
 
   render() {
@@ -56,11 +60,7 @@ class App extends Component {
           <p className={style.stat_text}>Neutral: {neutral}</p>
           <p className={style.stat_text}>Bad: {bad}</p>
           <p>Total: {this.feedbackCounter()}</p>
-          {percentage > 0 ? (
-            <p>Positive percentage: {percentage}</p>
-          ) : (
-            <p>No percentage</p>
-          )}
+          <p>Percentage: {percentage}</p>
         </section>
       </div>
     );

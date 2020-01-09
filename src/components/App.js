@@ -1,72 +1,16 @@
-import React, { Component } from "react";
-import style from "./app.module.css";
+import React from "react";
 
-class App extends Component {
+const App = () => {
   state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-    percentage: 0
+    contacts: [
+      { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
+      { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
+      { id: "id-3", name: "Eden Clements", number: "645-17-79" },
+      { id: "id-4", name: "Annie Copeland", number: "227-91-26" }
+    ],
+    filter: ""
   };
-
-  changeStats = e => {
-    const name = e.target.textContent.toLowerCase();
-    this.setState(prevState => ({
-      [name]: prevState[name] + 1
-    }));
-    this.countPositiveFeedbackPercentage();
-    localStorage.setItem("state", JSON.stringify(this.state));
-  };
-
-  countTotalFeedback = () => {
-    return this.state.good + this.state.neutral + this.state.bad;
-  };
-
-  countPositiveFeedbackPercentage = () => {
-    this.setState(prevState => ({
-      percentage: ((prevState.good * 100) / this.countTotalFeedback()).toFixed(
-        2
-      )
-    }));
-  };
-
-  render() {
-    const { good, neutral, bad, percentage } = this.state;
-    return (
-      <div>
-        <h1 className={style.title}>Please leave feedback</h1>
-        <button
-          className={style.button}
-          onClick={this.changeStats}
-          type="button"
-        >
-          Good
-        </button>
-        <button
-          className={style.button}
-          onClick={this.changeStats}
-          type="button"
-        >
-          Neutral
-        </button>
-        <button
-          className={style.button}
-          onClick={this.changeStats}
-          type="button"
-        >
-          Bad
-        </button>
-        <section>
-          <p className={style.statistics_title}>Statistics</p>
-          <p className={style.stat_text}>Good: {good}</p>
-          <p className={style.stat_text}>Neutral: {neutral}</p>
-          <p className={style.stat_text}>Bad: {bad}</p>
-          <p>Total: {this.countTotalFeedback()}</p>
-          <p>Percentage: {percentage}</p>
-        </section>
-      </div>
-    );
-  }
-}
+  return <div></div>;
+};
 
 export default App;

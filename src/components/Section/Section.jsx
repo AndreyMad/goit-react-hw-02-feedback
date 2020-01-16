@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Statistics from "../Statistics/Statistics";
-import Feedback from "../Feedback/Feedback";
+import Statistics from "../Statistics/Statistics.jsx";
+import Feedback from "../Feedback/Feedback.jsx";
 
 const Section = ({
   good,

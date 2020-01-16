@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import StatComponent from "./StatComponent";
-import Notification from "../Notifications/Notifications";
+import StatComponent from "./StatComponent.jsx";
+import Notification from "../Notifications/Notifications.jsx";
 
 const Statistics = ({
   good,

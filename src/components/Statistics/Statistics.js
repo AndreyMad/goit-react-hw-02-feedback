@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import StatComponent from "./StatComponent";
 import Notification from "../Notifications/Notifications";
+import style from "./StatComponent.module.css";
 
 const Statistics = ({
   good,
@@ -14,15 +14,14 @@ const Statistics = ({
     <section>
       {countTotalFeedback > 0 ? (
         <>
-          <StatComponent label="Good" value={good} />
-          <StatComponent label="Neutral" value={neutral} />
-          <StatComponent label="Bad" value={bad} />
-          <StatComponent label="Total feedback" value={countTotalFeedback} />
+          <p className={style.text}>Good:{good}</p>
+          <p className={style.text}>Neutral:{neutral}</p>
+          <p className={style.text}>Bad:{bad}</p>
+          <p className={style.text}>Total feedback:{countTotalFeedback}</p>
           {countPositiveFeedbackPercentage > 0 ? (
-            <StatComponent
-              label="Positive percntage"
-              value={countPositiveFeedbackPercentage}
-            />
+            <p className={style.text}>
+              Positive percntage:{countPositiveFeedbackPercentage}
+            </p>
           ) : null}
         </>
       ) : (

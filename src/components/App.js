@@ -26,18 +26,16 @@ class App extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     return (
-      <>
-        <Section
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          countTotalFeedback={this.countTotalFeedback()}
-          countPositiveFeedbackPercentage={this.countPositiveFeedbackPercentage()}
-          options={{ good, neutral, bad }}
-          onLeaveFeedback={this.changeStats}
-          title="Statistics"
-        />
-      </>
+      <Section
+        good={good}
+        neutral={neutral}
+        bad={bad}
+        countTotalFeedback={this.countTotalFeedback()}
+        countPositiveFeedbackPercentage={this.countPositiveFeedbackPercentage()}
+        options={{ good, neutral, bad }}
+        onLeaveFeedback={this.changeStats}
+        title="Statistics"
+      />
     );
   }
 }

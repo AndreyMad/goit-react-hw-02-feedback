@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Statistics from "../Statistics/Statistics";
-import Feedback from "../Feedback/Feedback";
+// eslint-disable-next-line import/extensions
+import Statistics from "../Statistics/Statistics.jsx";
+// eslint-disable-next-line import/extensions
+import Feedback from "../Feedback/Feedback.jsx";
 
 const Section = ({
   good,

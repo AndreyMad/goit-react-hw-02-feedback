@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Section from "./Section/Section";
+// eslint-disable-next-line import/extensions
+import Section from "./Section/Section.jsx";
 
 class App extends Component {
   state = {

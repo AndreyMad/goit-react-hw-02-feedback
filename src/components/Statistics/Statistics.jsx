@@ -12,13 +12,13 @@ const Statistics = ({
 }) => {
   return (
     <section>
-      {countTotalFeedback > 0 ? (
+      {countTotalFeedback ? (
         <>
           <p className={style.text}>Good:{good}</p>
           <p className={style.text}>Neutral:{neutral}</p>
           <p className={style.text}>Bad:{bad}</p>
           <p className={style.text}>Total feedback:{countTotalFeedback}</p>
-          {countPositiveFeedbackPercentage > 0 ? (
+          {countPositiveFeedbackPercentage ? (
             <p className={style.text}>
               Positive percntage:{countPositiveFeedbackPercentage}
             </p>

@@ -35,7 +35,11 @@ Section.propTypes = {
   bad: PropTypes.number.isRequired,
   countPositiveFeedbackPercentage: PropTypes.number.isRequired,
   countTotalFeedback: PropTypes.number.isRequired,
-  options: PropTypes.shape({}).isRequired,
+  options: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired
+  }).isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
   title: PropTypes.string
 };
